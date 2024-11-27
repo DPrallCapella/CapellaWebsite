@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <title>Invitation Page</title>
+    <link rel="stylesheet" type="text/css" href="Styling/styles.css">
+    <script src="JavaScript/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="top">
+            <a class="logo" href="index.html">CapellaVolunteers<span class="dotcom">.org</span></a>
+        </div>
+        <nav>
+            <ul class="topnav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="invitation.html">Invitation</a></li>
+                <li><a href="volunteer.html">Volunteers</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="registration.html" class="active">Registration</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="pageForm">
+        <h2>Registration Form</h2>
+        <form id="registrationForm">
+            <!-- span elements will be added to display an error message in the event of an error across all inputs-->
+
+            <!--USERNAME-->
+            <label for="userName">Username:</label>
+            <input type="text" id="userName" name="userName" placeholder="Enter your Username">
+            <span id="userNameError" class="error-message"></span>
+            <br>
+
+            <!--PASSWORD-->
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" placeholder="Enter your Password">
+            <span id="passwordError" class="error-message"></span>
+            <br>
+
+            <!--PASSWORD VERIFICATION-->
+            <label for="passwordVerify">Verify your Password:</label>
+            <input type="password" id="passwordVerify" name="passwordVerify" placeholder="Enter in your Password again">
+            <span id="passwordVerifyError" class="error-message"></span>
+            <br>
+
+            <!--FIRST NAME-->
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" placeholder="Enter your First Name">
+            <span id="firstNameError" class="error-message"></span>
+            <br>
+
+            <!--LAST NAME-->
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" placeholder="Enter your Last Name">
+            <span id="lastNameError" class="error-message"></span>
+            <br>
+
+            <!--EMAIL-->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your Email Address">
+            <span id="emailError" class="error-message"></span>
+            <br>
+
+            <!--PHONE NUMBER-->
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Enter your Phone Number">
+            <span id="phoneNumberError" class="error-message"></span>
+            <br>
+
+            <!--NEWSLETTER-->
+            <fieldset>
+                <legend>Sign up for Newsletter:</legend>
+                <input id="signUpNewsLetterYes" type="radio" name="signUpNewsletter" value="Yes" checked>
+                <label for="signUpNewsLetterYes">Yes</label>
+                <input id="signUpNewsLetterNo" type="radio" name="signUpNewsletter" value="No">
+                <label for="signUpNewsLetterNo">No</label>
+            </fieldset>
+            <!--
+            <label for="signUpNewsletter">Sign up for newsletter:</label>
+            <input id="signUpNewsLetterYes" type="radio" name="signUpNewsletter" value="Yes" checked> Yes
+            <input id="signUpNewsLetterNo" type="radio" name="signUpNewsletter" value="No"> No
+            -->
+            <br>
+
+            <!--SUBMIT-->
+            <input type="submit" value="Next step">
+        </form>
+    </section>
+
+    <footer>This events site is for IT3515 tasks.</footer>
+</body>
+
+</html>
