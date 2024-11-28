@@ -158,6 +158,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Check if all fields are valid
         if (isValid) {
+            // Set cookies for each input field
+            document.cookie = `userName=${userName.value}; path=/`;
+            document.cookie = `password=${document.getElementById('password').value}; path=/`;
+            document.cookie = `firstName=${document.getElementById('firstName').value}; path=/`;
+            document.cookie = `lastName=${document.getElementById('lastName').value}; path=/`;
+            document.cookie = `email=${document.getElementById('email').value}; path=/`;
+            document.cookie = `phoneNumber=${document.getElementById('phoneNumber').value}; path=/`;
+            document.cookie = `signUpNewsletter=${document.querySelector('input[name="signUpNewsletter"]:checked').value}; path=/`;
+
+            // Redirect to the confirmation page
             window.location.href = 'confirm.html';
         } else {
             document.querySelector('.error-message').scrollIntoView({ behavior: 'smooth' });

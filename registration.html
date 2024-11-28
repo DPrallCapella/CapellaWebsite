@@ -90,7 +90,39 @@
         </form>
     </section>
 
-    <footer>This events site is for IT3515 tasks.</footer>
+    <footer>This events site is for IT3515 tasks.</footer>\
+    <script>
+        // JavaScript for handling form submission and storing cookies
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('registrationForm');
+            form.addEventListener('submit', function (event) {
+                event.preventDefault(); // Prevent form submission
+
+                // Retrieve the values from the form fields
+                const userName = document.getElementById('userName').value;
+                const password = document.getElementById('password').value;
+                const passwordVerify = document.getElementById('passwordVerify').value;
+                const firstName = document.getElementById('firstName').value;
+                const lastName = document.getElementById('lastName').value;
+                const email = document.getElementById('email').value;
+                const phoneNumber = document.getElementById('phoneNumber').value;
+                const signUpNewsletter = document.querySelector('input[name="signUpNewsletter"]:checked').value;
+
+                // Save values in cookies
+                document.cookie = `userName=${userName}; path=/`;
+                document.cookie = `password=${password}; path=/`;
+                document.cookie = `passwordVerify=${passwordVerify}; path=/`;
+                document.cookie = `firstName=${firstName}; path=/`;
+                document.cookie = `lastName=${lastName}; path=/`;
+                document.cookie = `email=${email}; path=/`;
+                document.cookie = `phoneNumber=${phoneNumber}; path=/`;
+                document.cookie = `signUpNewsletter=${signUpNewsletter}; path=/`;
+
+                // Redirect to confirm.html
+                window.location.href = 'confirm.html';
+            });
+        });
+    </script>
 </body>
 
 </html>

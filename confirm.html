@@ -33,11 +33,49 @@
         <p>Please allow up to 2-3 business days for completion.</p>
         <p>Thank you!</p>
 
+        <h3>Your Data:</h3>
+        <ul id="userData">
+
+        </ul>
+
 
     </section>
 
-    <footer>This events site is for IT3515 tasks.
-    </footer>
+    <footer>This events site is for IT3515 tasks.</footer>
+    <script>
+        // Function to get cookies as a key-value pair
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+            return '';
+        }
+
+        // Function to display cookies as a list
+        function displayUserData() {
+            const userData = [
+                { name: 'Username', value: getCookie('userName') },
+                { name: 'Password', value: getCookie('password') },
+                { name: 'First Name', value: getCookie('firstName') },
+                { name: 'Last Name', value: getCookie('lastName') },
+                { name: 'Email', value: getCookie('email') },
+                { name: 'Phone Number', value: getCookie('phoneNumber') },
+                { name: 'Sign up for Newsletter', value: getCookie('signUpNewsletter') }
+            ];
+
+            const userDataList = document.getElementById('userData');
+            userData.forEach(data => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${data.name}: ${data.value}`;
+                userDataList.appendChild(listItem);
+            });
+        }
+
+        // Run the function to display user data when the page loads
+        window.onload = function () {
+            displayUserData();
+        };
+    </script>
 </body>
 
 </html>
